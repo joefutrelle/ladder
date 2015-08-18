@@ -1,0 +1,8 @@
+<rule name="main">
+  <first>
+    <test var="a" lt="${b}">
+      <var name="message">${a} is less than ${b}</var>
+    </test>
+    <var name="message">${a} is greater than or equal to ${b}</var>
+  </first>
+</rule>

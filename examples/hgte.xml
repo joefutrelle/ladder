@@ -1,0 +1,14 @@
+<namespace name="myrules">
+  <rule name="people">
+    <var name="person">
+      <val>Hansel</val>
+      <val>Gretel</val>
+      <val>Ted</val>
+      <val>Alice</val>
+    </var>
+  </rule>
+  <rule name="greetpeople">
+    <invoke rule="myrules.people"/>
+    <var name="greeting">Hello, ${person}.</var>
+  </rule>
+</namespace>
