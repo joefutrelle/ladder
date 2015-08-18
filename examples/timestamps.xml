@@ -1,0 +1,4 @@
+<rule name="main">
+  <csv file="log.csv" vars="time temperature comments"/>
+  <match var="time" timestamp="yyyy-mm-ddTHH:MM:SSZ"/>
+</rule>
