@@ -708,5 +708,6 @@ class Resolver(object):
 def locate_resolver(relative_path):
     return search_path(relative_path)
     
-def get_resolver(relative_path):
-    return Resolver(locate_resolver(relative_path))
+def get_resolver(*relative_paths):
+    locations = [locate_resolver(p) for p in relative_paths]
+    return Resolver(*locations)
