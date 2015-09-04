@@ -514,7 +514,7 @@ def evaluate_block(exprs,bindings={},global_namespace={}):
         except UnboundVariable, uv:
             logging.warn('test: unbound variable %s' % uv)
             return # miss
-        op = coalesce(*[a for a in ['eq','gt','lt','ge','le','ne'] if expr.get(a)])
+        op = coalesce(*[a for a in ['eq','gt','lt','ge','le','ne'] if expr.get(a) is not None])
         tv = expr.get(op)
         if eval_test(value,op,tv): # hit
             for s in inner_block(expr):
